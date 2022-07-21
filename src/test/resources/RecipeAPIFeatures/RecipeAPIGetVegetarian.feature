@@ -1,0 +1,22 @@
+Feature: Validate and Test Get Request for DieticianAPI with Vegetarian
+Background: The Authorization is set to "Basic auth" with valid username and password
+
+Scenario: Checking if we are getting record of Vegetarian
+Given User set get request with endpoint with "/Vegetarian" 
+When Users sends get request 
+Then Status 200 success will be shown
+
+Scenario: Checking if we are getting record of Vegetarian with invalid query
+Given User sets get request with invalid request query string
+When User send get request 
+Then Status 400 Validation Error will be shown
+
+Scenario:Checking if we are getting record of Vegetarian with default authorization
+Given Users sets GET request with endpoint "/Vegatarian" with default authorization
+When User sent GET request  
+Then Status 401 Unauthorised Acces will be shown
+
+Scenario:Checking if we are getting record of Vegetarian with invalid endpoint        
+Given Users set GET request with invalid endpoint
+When Users send GET request 
+Then Status 404 Not Found will be shown   
