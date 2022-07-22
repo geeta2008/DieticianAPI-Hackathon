@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
     @Test
 	@CucumberOptions(features ="src/test/resources/features",
 	glue= {"stepdefinitions","MorbidityAPI","RecipesAPI","AppHooks"},
-	plugin={"pretty",
+	plugin={"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 			"rerun:target/failedrerun.txt"
 			},
 		
