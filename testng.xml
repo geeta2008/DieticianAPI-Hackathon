@@ -3,7 +3,7 @@
 <suite name="Suite">
  <test name = "Test Demo">
     <classes>
-          <class name = "TestRunner.GetMorbidity"/>
+          <class name = "runner.MasterTestRunner"/>
      </classes>  
    </test>
 </suite> <!-- Suite -->
