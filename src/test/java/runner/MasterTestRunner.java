@@ -9,7 +9,8 @@ import io.cucumber.testng.CucumberOptions;
 	@CucumberOptions(features ="src/test/resources/features",
 	glue= {"stepdefinitions","MorbidityAPI","RecipesAPI","AppHooks"},
 	plugin={"pretty",
-			"rerun:target/failedrerun.txt"
+			"rerun:target/failedrerun.txt",
+			"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 			},
 		
 	//},"html:target/HtmlReports","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
