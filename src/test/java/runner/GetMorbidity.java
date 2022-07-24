@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 //this @test is for Allure report
 @Test
 @CucumberOptions(
-		features = "src/test/resources/features/GetMorbidityFeatures/", 
+		features = "src/test/resources/features/GetMorbidityFeatures/MorbidityAPI.feature", 
 		glue = {"stepdefinitions", "AppHooks" }, 
 		//plugin = { "pretty" , "html:target/HtmlReports","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		monochrome = true, dryRun = false,

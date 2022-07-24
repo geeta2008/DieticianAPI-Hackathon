@@ -47,6 +47,7 @@ public class MorbidAPIStepDef {
 
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	@Then("User will check for {int}  Ok.")
 	public void user_will_check_for_ok(Integer statusCode, io.cucumber.datatable.DataTable dataTable) {
 
@@ -72,31 +73,29 @@ public class MorbidAPIStepDef {
 
 			List<String> listOfMorbidityNameFromDataTable = getDataFromDataTable.get(0);
 			List<String> listOfMorbidityIDFromDataTable = getDataFromDataTable.get(1);
+			
+			Assert.assertTrue(listOfMorbidityNameFromResponse.containsAll(listOfMorbidityNameFromDataTable));
+			Assert.assertTrue(listOfMorbidityIDFromResponse.containsAll(listOfMorbidityIDFromDataTable));
 
 			// Assert the list for body validation
-			Assert.assertTrue(equalLists(listOfMorbidityNameFromResponse, listOfMorbidityNameFromDataTable));
-			Assert.assertTrue(equalLists(listOfMorbidityIDFromResponse, listOfMorbidityIDFromDataTable));
+		//	Assert.assertTrue(equalLists(listOfMorbidityNameFromResponse, listOfMorbidityNameFromDataTable));
+		//	Assert.assertTrue(equalLists(listOfMorbidityIDFromResponse, listOfMorbidityIDFromDataTable));
 		}
 
 	}
 
-	public boolean equalLists(List<String> one, List<String> two) {
-		if (one == null && two == null) {
-			return true;
-		}
-
-		if ((one == null && two != null) || one != null && two == null || one.size() != two.size()) {
-			return false;
-		}
-
-		// to avoid messing the order of the lists we will use a copy
-		one = new ArrayList<String>(one);
-		two = new ArrayList<String>(two);
-
-		Collections.sort(one);
-		Collections.sort(two);
-		return one.equals(two);
-	}
+	/*
+	 * public boolean equalLists(List<String> one, List<String> two) { if (one ==
+	 * null && two == null) { return true; }
+	 * 
+	 * // if ((one == null && two != null) || one != null && two == null ||
+	 * one.size() != two.size()) { // return false; // }
+	 * 
+	 * // to avoid messing the order of the lists we will use a copy one = new
+	 * ArrayList<String>(one); two = new ArrayList<String>(two);
+	 * 
+	 * Collections.sort(one); Collections.sort(two); return two.contains(one); }
+	 */
 
 	@Given("For Morbidity Get request, the invalid Authorization is set to Basic auth with servers running.")
 	public void for_morbidity_get_request_the_invalid_authorization_is_set_to_basic_auth_with_servers_running() {

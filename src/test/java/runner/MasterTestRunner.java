@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 
 	//@RunWith(Cucumber.class) 
     @Test
-	@CucumberOptions(features ="src/test/resources/features",
+	@CucumberOptions(features ="src/test/resources/features/",
 	glue= {"stepdefinitions","MorbidityAPI","RecipesAPI","AppHooks"},
 	plugin={"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 			"rerun:target/failedrerun.txt"
