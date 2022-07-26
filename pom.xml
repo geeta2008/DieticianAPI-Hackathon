@@ -255,7 +255,7 @@
 				<version>${maven.surefire.version}</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>TestNG.xml</suiteXmlFile>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<argLine>
                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.9.1/aspectjweaver-1.9.9.1.jar"
