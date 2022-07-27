@@ -225,11 +225,11 @@
 			<version>1.1.1</version>
 		</dependency>
 
-		<!--<dependency>
+		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreports-cucumber7-adapter</artifactId>
 			<version>1.7.0</version>
-		</dependency> -->
+		</dependency> 
 
 		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
 		<dependency>
@@ -289,7 +289,7 @@
 
 			</plugin>
 
-			<!--<plugin>
+			<plugin>
 				<groupId>tech.grasshopper</groupId>
 				<artifactId>cucumber-pdf-plugin</artifactId>
 				<version>1.11.0</version>
@@ -305,7 +305,7 @@
 				<configuration>
 					<cucumberJsonReportDirectory>${project.build.directory}/json-report</cucumberJsonReportDirectory>
 				</configuration>
-			</plugin>-->
+			</plugin>
 			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-failsafe-plugin</artifactId> 
 				<version>3.0.0-M3</version> <executions> <execution> <goals> <goal>integration-test</goal> 
 				</goals> <configuration> UNCOMMENT - To add any exclusions if required <excludes> 
