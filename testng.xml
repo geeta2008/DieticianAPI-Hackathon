@@ -9,7 +9,4 @@
 			<class name="runner.PostUsersRunner"></class>
 		</classes>
 	</test>
-	<listeners>
-		<listener class-name="ExtentReports.ExtentReporterNG" />
-	</listeners>
 </suite>
